@@ -41,6 +41,10 @@
           <a class="nav-link" routerLink="service">service</a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link" [class.disabled]="!loginStatus" routerLink="login">logout</a>
+        </li>
+
 
       </ul>
     </div>

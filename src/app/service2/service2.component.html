@@ -1,0 +1,90 @@
+
+
+<div class="container">
+    <form [formGroup]="ServiceForm" name="serveForm" #serveForm="ngForm" (ngSubmit)="Service(serveForm.value)">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <br>
+                    <label>Service Id</label>
+                    <input class="form-control" type="text" name="ServiceId" formControlName="ServiceId">
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label>Select Device</label>
+                    <select class="form-control" name="device"    formControlName="device">
+                        <option value="" selected> Select device </option>
+                        <option value="mobile"> mobile </option>
+                        <option value="laptop"> laptop </option>
+                        <option value="desktop"> desktop </option>
+                    </select>
+                 </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <br>
+                    <label>Device company</label>
+                    <input class="form-control" type="text" name="deviceCompany" formControlName="deviceCompany">
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <br>
+                    <label>Model</label>
+                    <input class="form-control" type="text" name="model" formControlName="model">
+                </div>
+            </div>
+
+            
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <br>
+                    <label>Problem</label>
+                    <input class="form-control" type="text" name="problem" formControlName="problem">
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <br>
+                    <label>Address</label>
+                    <input class="form-control" type="text" name="address" formControlName="address">
+                </div>
+            </div>
+
+
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <br>
+                    <label>Date</label>
+                    <input class="form-control" type="date" name="date" formControlName="date">
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <br>
+                    <label>Time</label>
+                    <input class="form-control" type="text" name="time" formControlName="time">
+                    <option>select time</option>
+                    <option value="11:00 AM - 2:00 PM">11:00 AM - 2:00 PM</option>
+                    <option value="2:00 PM - 5:00 PM">2:00 PM - 5:00 PM</option>
+                    <option value="5:00 PM - 8:00 PM">5:00 PM - 8:00 PM</option>
+                </div>
+            </div>
+            
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label></label><br>
+                    <button class="btn btn-primary" > Submit </button>
+                 </div>
+            </div>
+        </div>
+    </form>
+
+</div>

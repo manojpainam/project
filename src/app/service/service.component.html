@@ -1,0 +1,76 @@
+<html>
+
+<body>
+
+  <div class="container">
+    <div class="title">Service Request Form</div><br/>
+
+    <form [formGroup]="serviceForm" name="serveForm" #serveForm="ngForm" (ngSubmit)="Custservice(serveForm.value)">
+
+      <div class="form-group">
+        <label>Request Id</label>
+        <input class="form-control" type="text" ngModel name="ServiceId" 
+          formControlName="ServiceId">
+      </div>
+
+      <div class="form-group">
+        <label for="device">Select device:</label><br />
+
+        <select class="form-control" ngModel name="device" id="device" formControlName="device">
+          <option value="mobile">Mobile</option>
+          <option value="laptop">Laptop</option>
+          <option value="desktop">Desktop</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Device Company</label>
+        <input class="form-control" type="text" ngModel name="deviceCompany" placeholder="Enter your Device Company" 
+          formControlName="deviceCompany" >
+      </div>
+
+      <div class="form-group">
+        <label>Enter Model</label>
+        <input class="form-control" type="text" ngModel name="model" placeholder="Enter  Model" 
+          formControlName="model">
+      </div>
+
+      <div class="form-group">
+        <label>Problem</label>
+        <input class="form-control" type="text" ngModel name="problem" placeholder="Enter your Problem" 
+          formControlName="problem">
+      </div>
+
+      <div class="form-group">
+        <label>Enter Your Local Address</label>
+        <input class="form-control" type="text" ngModel name="address" placeholder="Enter your Address" 
+          formControlName="address">
+      </div>
+
+      <div class="form-group">
+        <label>date</label>
+        <input class="form-control" type="date" ngModel name="date"  formControlName="date">
+      </div>
+
+      <div class="form-group">
+        <label for="time">Select time:</label><br />
+
+        <select class="form-control" ngModel name="time" id="time" formControlName="time">
+          <option>select time</option>
+          <option value="11:00 AM - 2:00 PM">11:00 AM - 2:00 PM</option>
+          <option value="2:00 PM - 5:00 PM">2:00 PM - 5:00 PM</option>
+          <option value="5:00 PM - 8:00 PM">5:00 PM - 8:00 PM</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+      
+    </form>
+
+  </div>
+
+</body>
+
+</html>

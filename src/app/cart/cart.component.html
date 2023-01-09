@@ -1,0 +1,24 @@
+<br/>
+<h3 align="center"> Total cart Items:{{cartItems.length}}</h3>
+<div class="container">
+    <table class="table table-bordered tabl-hover table-sm">
+        <thead>
+            <tr class="table-info text-center"> 
+            <th>Product Name</th>
+            <th>Product Description</th>
+            <th>Product Price</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of cartItems" class="text-center">
+                <td>{{product.name}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.price}}</td>
+            </tr>
+            <tr>
+                <span class="3"></span>
+                <td><h3>Grand Total =</h3><h2>{{total}}</h2></td>
+            </tr>
+        </tbody>
+</table>
+</div>

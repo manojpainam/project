@@ -18,8 +18,6 @@ export class CartComponent implements OnInit{
    
 
   ngOnInit(): void {
-    // this.data = localStorage.getItem('cartItems');
-    // this.cartItems = JSON.parse(this.data);
     this.cartItems = this.service.cartItems;
 
     this.cartItems.forEach((product : any)=>{

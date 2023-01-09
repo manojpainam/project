@@ -85,208 +85,96 @@
 <div class="shell" >
     <div class="container" >
         <div class="row">
-            <div class="col-md-3" >
+            <div class="col-md-3" *ngFor="let product of products">
                 <div class="wsk-cp-product">
+            
                     <div class="wsk-cp-img">
-                        <img src="https://fdn2.gsmarena.com/vv/pics/samsung/samsung-galaxy-j7-j700f-1.jpg"
-                            alt="Product" class="img-responsive" />
+                        <img [src]="product.imagePath" alt="Product"
+                            class="img-responsive" />
                     </div>
+            
                     <div class="wsk-cp-text">
                         <div class="category">
                             <span>Mobile</span>
                         </div>
+            
                         <div class="title-product">
-                            <h3>Samsung J7</h3>
+                            <h3>{{product.name}}</h3>
                         </div>
+            
                         <div class="description-prod">
-                            <p><b>RAM:</b> 6GB+128GB<br/>
-                                <b>Camera:</b> 48MP<br/>
-                             <b>Battery:</b>4300Mah</p>
+                            <p>{{product.description}}</p>
                         </div>
+            
                         <div class="card-footer">
-                            <div class="wcf-left"><span class="price">₹50000</span></div>
-                            <div class="wcf-right"><button class="btn btn-primary" >Add to Cart</button></div>
+                            <div class="wcf-left"><span class="price">{{product.price}}</span></div>
+                            <div class="wcf-right"><button class="btn btn-primary">Add to Cart</button></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3">
-                <div class="wsk-cp-product">
-                    <div class="wsk-cp-img"><img
-                            src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-12-r1.jpg"
-                            alt="Product" class="img-responsive" /></div>
-                    <div class="wsk-cp-text">
-                        <div class="category"> 
-                            <span>Mobile</span>
+            
+                <div class="col-md-3" *ngFor="let laptop of laptops">
+                    <div class="wsk-cp-product">
+                
+                        <div class="wsk-cp-img">
+                            <img [src]="laptop.imagePath" alt="Product"
+                                class="img-responsive" />
                         </div>
-                        <div class="title-product">
-                            <h3>I phone 12</h3>
-                        </div>
-                        <div class="description-prod">
-                            <p><b>RAM:</b> 6GB+128GB<br/>
-                                <b>Camera:</b> 48MP<br/>
-                             <b>Battery:</b>4300Mah</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="wcf-left"><span class="price">₹50000</span></div>
-                            <div class="wcf-right"><button class="btn btn-primary" >Add to Cart</button></div>
+                
+                        <div class="wsk-cp-text">
+                            <div class="category">
+                                <span>Laptop</span>
+                            </div>
+                
+                            <div class="title-product">
+                                <h3>{{laptop.name}}</h3>
+                            </div>
+                
+                            <div class="description-prod">
+                                <p>{{laptop.description}}</p>
+                            </div>
+                
+                            <div class="card-footer">
+                                <div class="wcf-left"><span class="price">{{laptop.price}}</span></div>
+                                <div class="wcf-right"><button class="btn btn-primary">Add to Cart</button></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-md-3">
-                <div class="wsk-cp-product">
-                    <div class="wsk-cp-img"><img
-                            src="https://fdn2.gsmarena.com/vv/pics/oneplus/oneplus-8-polar-silver.jpg"
-                            alt="Product" class="img-responsive" /></div>
-                    <div class="wsk-cp-text">
-                        <div class="category">
-                            <span>Mobile</span>
-                        </div>
-                        <div class="title-product">
-                            <h3>One plus 8</h3>
-                        </div>
-                        <div class="description-prod">
-                            <p><b>RAM:</b> 6GB+128GB<br/>
-                               <b>Camera:</b> 48MP<br/>
-                            <b>Battery:</b>4300Mah</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="wcf-left"><span class="price">₹50000</span></div>
-                            <div class="wcf-right"><button class="btn btn-primary" >Add to Cart</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-3">
-                <div class="wsk-cp-product">
-                    <div class="wsk-cp-img"><img
-                            src="https://fdn2.gsmarena.com/vv/pics/realme/realme-9-5g-global-1.jpg"
-                            alt="Product" class="img-responsive" /></div>
-                    <div class="wsk-cp-text">
-                        <div class="category">
-                            <span>Mobile</span>
-                        </div>
-                        <div class="title-product">
-                            <h3>Real me 9 5G</h3>
-                        </div>
-                        <div class="description-prod">
-                            <p><b>RAM:</b> 6GB+128GB<br/>
-                                <b>Camera:</b> 64MP<br/>
-                             <b>Battery:</b>4500Mah</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="wcf-left"><span class="price">₹50000</span></div>
-                            <div class="wcf-right"><button class="btn btn-primary" >Add to Cart</button></div>
+                
+                    <div class="col-md-3" *ngFor="let desktop of desktops">
+                        <div class="wsk-cp-product">
+                    
+                            <div class="wsk-cp-img">
+                                <img [src]="desktop.imagePath" alt="Product"
+                                    class="img-responsive" />
+                            </div>
+                    
+                            <div class="wsk-cp-text">
+                                <div class="category">
+                                    <span>deskop</span>
+                                </div>
+                    
+                                <div class="title-product">
+                                    <h3>{{desktop.name}}</h3>
+                                </div>
+                    
+                                <div class="description-prod">
+                                    <p>{{desktop.description}}</p>
+                                </div>
+                    
+                                <div class="card-footer">
+                                    <div class="wcf-left"><span class="price">{{desktop.price}}</span></div>
+                                    <div class="wcf-right"><button class="btn btn-primary">Add to Cart</button></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-3">
-                <div class="wsk-cp-product">
-                    <div class="wsk-cp-img">
-                        <img src="https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-12-pro-speed-1.jpg"
-                            alt="Product" class="img-responsive" />
-                    </div>
-                    <div class="wsk-cp-text">
-                        <div class="category">
-                            <span>Mobile</span>
-                        </div>
-                        <div class="title-product">
-                            <h3>Redmi Note 12 pro</h3>
-                        </div>
-                        <div class="description-prod">
-                            <p><b>Processor:</b>Snapdragon 778G 5G<br/>
-                                <b>Camera:</b> 48MP<br/>
-                             <b>Battery:</b>4300Mah</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="wcf-left"><span class="price">₹50000</span></div>
-                            <div class="wcf-right"><button class="btn btn-primary" >Add to Cart</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="wsk-cp-product">
-                    <div class="wsk-cp-img"><img
-                            src="https://images.pexels.com/photos/1229861/pexels-photo-1229861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            alt="Product" class="img-responsive" /></div>
-                    <div class="wsk-cp-text">
-                        <div class="category">
-                            <span>Laptop</span>
-                        </div>
-                        <div class="title-product">
-                            <h3>MAC</h3>
-                        </div>
-                        <div class="description-prod">
-                            <p><b>OS:</b> MAC<br/>
-                             <b>bsttery:</b>4300Mah</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="wcf-left"><span class="price">₹50000</span></div>
-                            <div class="wcf-right"><button class="btn btn-primary" >Add to Cart</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="wsk-cp-product">
-                    <div class="wsk-cp-img"><img
-                            src="https://www.lenovo.com/medias/lenovo-laptop-yoga-slim-7-carbon-gen-6-14-intel-subseries-hero.png?context=bWFzdGVyfHJvb3R8MjIxNTIyfGltYWdlL3BuZ3xoYTgvaDQ5LzE0MTkyNDM0Njc1NzQyLnBuZ3w1YzdiNzFlYjBiYWY0YmZlN2Q2MzhkZmViZDdkZTE2NGM0NWU4YTgyZjY5NWI3MDgyNDJlNjE3ZTNhY2ZmMmZh"
-                            alt="Product" class="img-responsive" /></div>
-                    <div class="wsk-cp-text">
-                        <div class="category">
-                            <span>Laptop</span>
-                        </div>
-                        <div class="title-product">
-                            <h3>Lenovo legion </h3>
-                        </div>
-                        <div class="description-prod">
-                            <p><b>processod:</b> i7 11th gen<br/>
-                                <b>OS:</b> Windows<br/>
-                             <b>Battery:</b>4300Mah</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="wcf-left"><span class="price">₹85000</span></div>
-                            <div class="wcf-right"><button class="btn btn-primary" >Add to Cart</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="wsk-cp-product">
-                    <div class="wsk-cp-img"><img
-                            src="https://www.lenovo.com/medias/lenovo-desktop-ideacentre-aio-3-gen-6-24-amd-subseries-gallery-1.png?context=bWFzdGVyfHJvb3R8OTEwMjB8aW1hZ2UvcG5nfGg1ZC9oZDgvMTE4OTY3MjU3MzM0MDYucG5nfGRjZmQxMmYxMzk0ODc1ZDM0MzI5OTU4YjE0ZTQwYjBlMWRjZDczNzUzMGE4M2I4N2EwODVjZTc2YmZlNTI5ZTA"
-                            alt="Product" class="img-responsive" /></div>
-                    <div class="wsk-cp-text">
-                        <div class="category">
-                            <span>Desktop</span>
-                        </div>
-                        <div class="title-product">
-                            <h3>lenovo</h3>
-                        </div>
-                        <div class="description-prod">
-                            <p><b>size:</b> 24in<br/>
-                                <b>brightness:</b> 100nits<br/>
-                             <b>CPU: 12th gen</b></p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="wcf-left"><span class="price">₹85000</span></div>
-                            <div class="wcf-right"><button class="btn btn-primary" >Add to Cart</button></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>

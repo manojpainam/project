@@ -10,7 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
 import { ServiceComponent } from './service/service.component';
-import { Service2Component } from './service2/service2.component';
+
 
 const routes: Routes = [
   {path:'', component:LandingpageComponent},
@@ -20,7 +20,7 @@ const routes: Routes = [
   {path:'products',canActivate:[AuthGuard], component:ProductsComponent},
   {path:'cart',component:CartComponent},
   {path:'service', component:ServiceComponent},
-  {path:'service2',component:Service2Component}
+
 ];
 
 @NgModule({
@@ -28,6 +28,7 @@ const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes)],
+    
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

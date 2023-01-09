@@ -20,7 +20,7 @@ import { CartComponent } from './cart/cart.component';
 import { ServiceComponent } from './service/service.component';
 import { Header2Component } from './header2/header2.component';
 import { ProjectService } from './project.service';
-import { Service2Component } from './service2/service2.component';
+
 
 
 
@@ -36,7 +36,7 @@ import { Service2Component } from './service2/service2.component';
     CartComponent,
     ServiceComponent,
     Header2Component,
-    Service2Component,
+
   ],
 
   imports: [

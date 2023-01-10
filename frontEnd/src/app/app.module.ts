@@ -20,6 +20,9 @@ import { CartComponent } from './cart/cart.component';
 import { ServiceComponent } from './service/service.component';
 import { Header2Component } from './header2/header2.component';
 import { ProjectService } from './project.service';
+import { Products2Component } from './products2/products2.component';
+import { Cart2Component } from './cart2/cart2.component';
+import { FilterPipe } from './filter.pipe';
 
 
 
@@ -36,6 +39,9 @@ import { ProjectService } from './project.service';
     CartComponent,
     ServiceComponent,
     Header2Component,
+    Products2Component,
+    Cart2Component,
+    FilterPipe,
 
   ],
 

@@ -1,0 +1,22 @@
+.form-control{
+    border-radius: 3px;
+    width: 550px;
+    margin-left:20px;
+   margin-top: 8px;
+}
+
+#logout{
+    margin-left: 400px;
+}
+
+.search-icon{
+    position: absolute;
+    z-index: 10;
+    right: 580px;
+    color: black;
+    top:36px;
+}
+
+.cart-plus{
+    margin-left: 30px;
+}

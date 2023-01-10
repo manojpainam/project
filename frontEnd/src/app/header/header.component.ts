@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { CustomerService } from '../customer.service';
+import { CartService } from '../cart.service';
 
 declare var jQuery: any;
 
@@ -18,10 +19,13 @@ export class HeaderComponent implements OnInit{
   registerForm: FormGroup;
   registerInfo: any;
   countries: any;
-cartItems: any;
+  cartItems: any;
+  
+public totalItems: number = 0;
+public searchTerm : string = '';
 
 
-  constructor(private service: CustomerService,private formbuilder: FormBuilder ,private router: Router, private toastr: ToastrService) {
+  constructor(private service: CustomerService,private formbuilder: FormBuilder ,private router: Router, private toastr: ToastrService,private cartService: CartService) {
     this.registerForm = this.formbuilder.group({
       custId:new FormControl(''),
       custName:new FormControl(''),
@@ -53,6 +57,16 @@ cartItems: any;
   this.loginStatus = data;
  });
 
+ this.cartService.getProducts().subscribe(res=>{
+     this.totalItems = res.length;
+ })
+
+  }
+  
+  search(event : any){
+     this.searchTerm = (event.target as HTMLInputElement).value;
+     console.log(this.searchTerm);
+     this.cartService.search.next(this.searchTerm);
   }
 
   LoginCust(){

@@ -1,0 +1,149 @@
+[
+    {
+        "id": 1,
+        "title": "PlayStation 5",
+        "price": 104539.95,
+        "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        "category": "electronics",
+        "image": "https://gmedia.playstation.com/is/image/SIEPDC/console-right_@1x?fmt=png-alpha&scl=1",
+        "rating": {
+            "rate": 3.9,
+            "count": 120
+        }
+    } ,   
+ 
+    {
+        "id": 2,
+        "title": " Tablets ",
+        "price": 99999.3,
+        "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+        "category": "electronics",
+        "image": "https://static.toiimg.com/thumb/resizemode-4,msid-69927167,imgsize-200,width-1200,imgv-4/69927167.jpg",
+        "rating": {
+            "rate": 4.1,
+            "count": 259
+        }
+    },
+    {
+        "id": 3,
+        "title": "Head phones",
+        "price": 55.99,
+        "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+        "category": "electronics",
+        "image": "https://images-cdn.ubuy.co.in/633aec3932fb2b697f1d028e-gaming-headset-ps5-ps4-headset-with-7-1.jpg",
+        "rating": {
+            "rate": 4.7,
+            "count": 500
+        }
+    },
+    {
+        "id": 4,
+        "title": "laptops",
+        "price": 15.99,
+        "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+        "category": "electronics",
+        "image": "https://assets.newatlas.com/dims4/default/174fcba/2147483647/strip/true/crop/2000x1333+0+333/resize/720x480!/quality/90/?url=http%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2F29%2F80%2Faf8078114168bcc9e05aefe132d3%2F08-yoga-slim-9i-gen7-hero-front-facing-right.png",
+        "rating": {
+            "rate": 2.1,
+            "count": 430
+        }
+    },
+    {
+        "id": 5,
+        "title": "Lcd screen Tv",
+        "price": 695,
+        "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+        "category": "electronics",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuiQ9yRjmh7QZX3lN61WdXm4IGwAEHkPEB4g&usqp=CAU",
+        "rating": {
+            "rate": 4.6,
+            "count": 400
+        }
+    },
+    {
+        "id": 6,
+        "title": "Desktop ",
+        "price": 168,
+        "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+        "category": "electronic",
+        "image": "https://images-cdn.ubuy.co.in/633af165d06713695c604871-hp-prodesk-6200-desktop-computer-pc.jpg",
+        "rating": {
+            "rate": 3.9,
+            "count": 70
+        }
+    },
+    {
+        "id": 7,
+        "title": "external dvd player",
+        "price": 9.99,
+        "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+        "category": "electronics",
+        "image": "https://www.topprice.in/image/cache/catalog/datayuge_feed/ca0e06830907dfc33706ff81d8313e5f002a332e-600x600.jpg",
+        "rating": {
+            "rate": 3,
+            "count": 400
+        }
+    },
+    {
+        "id": 8,
+        "title": "bluetooth Speakers",
+        "price": 20000.99,
+        "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+        "category": "electronics",
+        "image": "https://m.media-amazon.com/images/I/710jk0KzTjL._AC_SS450_.jpg",
+        "rating": {
+            "rate": 1.9,
+            "count": 100
+        }
+    },
+    {
+        "id": 9,
+        "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+        "price": 643,
+        "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+        "category": "electronics",
+        "image": "https://www.topprice.in/image/cache/catalog/datayuge_feed/b0d0f0a7dc6c354789b3e7e81d6d11886484b543-600x600.jpg",
+        "rating": {
+            "rate": 3.3,
+            "count": 203
+        }
+    },
+    {
+        "id": 10,
+        "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+        "price": 109,
+        "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+        "category": "electronics",
+        "image": "https://m.media-amazon.com/images/I/71J4Q8zM72L._SX450_.jpg",
+        "rating": {
+            "rate": 2.9,
+            "count": 470
+        }
+    },
+{
+        "id": 11,
+        "title": "Smart Phone ",
+        "price": 120000,
+        "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+        "category": "electronics",
+        "image": "https://www.reliancedigital.in/medias/Apple-iPhone-14-Pro-Max-Mobile-Phone-493177798-i-1-1200Wx1200H-300Wx300H?context=bWFzdGVyfGltYWdlc3wyMzk2N3xpbWFnZS9qcGVnfGltYWdlcy9oZDQvaDAzLzk4OTA3MjgyNDczMjYuanBnfGM1ZDU5NmEyOTUzZmZkMWViODBhZDQzODdjM2E3ZmEzOWZmYzA3NzliNDNhNDgxZGE4NTk5YzY5NDIyZmExYWE",
+        "rating": {
+            "rate": 3.3,
+            "count": 203
+        }
+    },
+{
+        "id": 12,
+        "title": "Lenovo ThinkCentre M72e Motherboard 03T8179 ",
+        "price": 120000,
+        "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+        "category": "electronics",
+        "image": "https://www.xfurbish.com/image/cache/wkseller/342/Motherboard/03T8179-1000x1000h.webp",
+        "rating": {
+            "rate": 3.3,
+            "count": 203
+        }
+    }
+    
+     
+]

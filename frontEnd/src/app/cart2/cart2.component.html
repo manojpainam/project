@@ -33,7 +33,7 @@
                             <td colspan="4"></td>
                             <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
                             <td><button routerLink="/products2" class="btn btn-primary">shop more</button></td>
-                            <td><button class="btn btn-success">checkout</button></td>
+                            <td><button (click)="pay()" class="btn btn-success">Buy</button></td>
                             <td><strong>₹{{grandTotal}}</strong></td>
                         </tr>
                     </tbody>

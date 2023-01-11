@@ -28,4 +28,33 @@ export class Cart2Component implements OnInit {
     this.cartService.removeAllCart();
   }
 
+  options = {
+    "key": "rzp_test_7HdkaZ1xFGPomB",
+    "amount": "50000", 
+    "currency": "INR",
+    "name": "Acme Corp",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "order_id": "", 
+    "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+    "prefill": {
+        "name": "manoj",
+        "email": "maojpainam1221@gmail.com",
+        "contact": "6309170308"
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+
+rzp1: any;
+pay(){
+   this.options.amount = "500000";
+   this.rzp1 = new this.cartService.nativeWindow.Razorpay(this.options);
+   this.rzp1.open();
+}
+
 }

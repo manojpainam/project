@@ -1,10 +1,17 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
+function _window() : any {
+  return window;
+}
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
+
+  get nativeWindow() : any {
+    return _window();
+ }
 
   public cartItemList : any=[]
   public productList = new BehaviorSubject<any>([]);

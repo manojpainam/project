@@ -14,8 +14,9 @@ import { Cart2Component } from './cart2/cart2.component';
 
 
 const routes: Routes = [
-  {path:'' , redirectTo:'products2',pathMatch:'full'},
+  // {path:'' , redirectTo:'products2',pathMatch:'full'},
   {path:'', component:LandingpageComponent},
+  {path:'landingpage', component:LandingpageComponent},
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'header', component:HeaderComponent},

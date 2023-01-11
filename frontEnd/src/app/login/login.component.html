@@ -1,50 +1,61 @@
-<html>
-<div class="container">
-  <div class="container">
-
-  <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm.value)" novalidate>
-
-    <h1 align="center">Login</h1>
-     
-    <div class="input-group">
-      <span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i> </span>
-      <input type="text" class="form-control" name="emailId" ngModel #emailId="ngModel" required minlength="2"
-        maxlength="50" email />
-    </div><br />
-
-    <div *ngIf="emailId.errors?.['required']  && emailId.touched">
-      <h6> Enter Login Id </h6>
-    </div>
-
-    <div *ngIf="emailId.errors?.['minlength']  && emailId.touched">
-      <h6> Enter atleast 2 character for EmailID </h6>
-    </div>
-
-    <div *ngIf="emailId.errors?.['email'] && emailId.touched">Enter EmailId correctly</div>
-
-    <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-      <input type="password" class="form-control" name="password" ngModel #password="ngModel" required minlength="2"
-        maxlength="10" />
-    </div><br />
-
-    <div *ngIf="password.errors?.['required'] && password.touched">
-      <h6> Enter Password </h6>
-    </div>
-
-    <div *ngIf="emailId.errors?.['minlength']  && emailId.touched">
-      <h6> Enter atleast 2 character for password </h6>
-    </div><br />
 
 
-    <div align="center">
-      <button align="center" [disabled]="!loginForm.valid" class="btn btn-primary"> Login
-      </button>
-    </div><br/><br/><br/>
-
-  </form>
-</div>
+<body>
+  <div class="center">
+    <h1>Login</h1>
 
 
-</div>
-</html>
+
+    <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm.value)" novalidate>
+
+
+
+      <div class="input-group">
+        <span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i> </span>
+        <input type="text" class="form-control" name="emailId" ngModel #emailId="ngModel" required minlength="2"
+          maxlength="50" email />
+      </div><br />
+
+      <div *ngIf="emailId.errors?.['required']  && emailId.touched">
+        <h6> Enter Login Id </h6>
+      </div>
+
+      <div *ngIf="emailId.errors?.['minlength']  && emailId.touched">
+        <h6> Enter atleast 2 character for EmailID </h6>
+      </div>
+
+      <div *ngIf="emailId.errors?.['email'] && emailId.touched">Enter EmailId correctly</div>
+
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input type="password" class="form-control" name="password" ngModel #password="ngModel" required minlength="2"
+          maxlength="10" />
+      </div><br />
+
+      <div *ngIf="password.errors?.['required'] && password.touched">
+        <h6> Enter Password </h6>
+      </div>
+
+      <div *ngIf="emailId.errors?.['minlength']  && emailId.touched">
+        <h6> Enter atleast 2 character for password </h6>
+      </div><br />
+
+      <div class="pass">Forgetten password</div>
+
+      <div align="center">
+        <button align="center" [disabled]="!loginForm.valid" class="btn btn-primary"> Login
+        </button>
+      </div>
+         
+      <div class="sign-up">
+        not a member?<a routerLink="/register">sign up</a>
+      </div>
+
+
+    </form>
+  </div>
+</body>
+
+
+
+

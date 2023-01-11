@@ -6,17 +6,17 @@
 }
 
 #logout{
-    margin-left: 400px;
+    margin-left: 450px;
 }
 
 .search-icon{
     position: absolute;
     z-index: 10;
-    right: 580px;
+    right: 620px;
     color: black;
-    top:36px;
+    top:38px;
 }
 
 .cart-plus{
-    margin-left: 30px;
+    margin-left: 20px;
 }

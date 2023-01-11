@@ -69,21 +69,10 @@ public searchTerm : string = '';
      this.cartService.search.next(this.searchTerm);
   }
 
-  LoginCust(){
-    jQuery('#loginModal').modal('show');
-  }
-
-  regCust(){
-    jQuery('#regModal').modal('show')
-  }
-
-  
- 
-
   register(customer: any){
    
     this.service.registerCustomer(customer).subscribe((result: any) => {this.registerInfo = result; console.log(result);
-    jQuery('#regModal').modal('hide');
+    
     console.log(result);});
   }
 

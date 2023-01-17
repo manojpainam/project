@@ -52,7 +52,7 @@ export class Cart2Component implements OnInit {
 
 rzp1: any;
 pay(){
-   this.options.amount = "500000";
+   this.options.amount = '50000';
    this.rzp1 = new this.cartService.nativeWindow.Razorpay(this.options);
    this.rzp1.open();
 }

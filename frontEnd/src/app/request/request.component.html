@@ -1,0 +1,83 @@
+<body>
+<form #servForm="ngForm" (ngSubmit)="Request(servForm.value)">
+    <div class="container">
+        <table align="center">
+            <thead>
+                <tr class="table-info text-center">
+                    <th colspan="2">
+                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;Problem Registration</h2>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td align="right" class="heading">Enter Service Id &nbsp;</td>
+                    <td align="left"> <input type="text" name="servId" ngModel placeholder="ServId"/></td>
+                </tr><br/>
+
+                <tr>
+                    <td align="right" class="heading"> Select Device &nbsp;</td>
+                    <td align="left"> 
+                        <select name="device" ngModel>
+                        <option value="" selected> Select device </option>
+                        <option value="Mobile"> Mobile </option>
+                        <option value="Laptop"> Laptop </option>
+                        <option value="Desktop"> Desktop </option>
+                        </select>
+                    </td>
+                </tr><br/>
+
+                <tr >
+                    <td align="right" class="heading"> Enter Brand &nbsp;</td>
+                    <td align="left"> <input type="text" name="brand" ngModel placeholder="Brand"/></td>
+                </tr><br/>
+
+                <tr >
+                    <td align="right" class="heading"> Enter Model &nbsp;</td>
+                    <td align="left"> <input type="text" name="model" ngModel placeholder="Model"/></td>
+                </tr><br/>
+
+                <tr >
+                    <td align="right" class="heading"> Enter Problem &nbsp;</td>
+                    <td align="left"> <input type="text" name="problem" ngModel placeholder="Problem"/></td>
+                </tr><br/>
+
+                <tr >
+                    <td align="right" class="heading"> Enter Mobile Number &nbsp;</td>
+                    <td align="left"> <input type="text" name="number" ngModel placeholder="Number"/></td>
+                </tr><br/>
+
+
+                <tr >
+                    <td align="right" class="heading"> Enter Address &nbsp;</td>
+                    <td align="left"> <input type="text" name="address" ngModel placeholder="Address"/></td>
+                </tr><br/>
+
+                <tr >
+                    <td align="right" class="heading"> Date Of visit &nbsp;</td>
+                    <td align="left"> <input type="date" name="dateOfVisit" ngModel /></td>
+                </tr><br/>
+
+                <tr >
+                    <td align="right" class="heading"> Time &nbsp;</td>
+                    <td align="left">
+                        <select name="time" ngModel>
+                            <option value="" selected> Select time </option>
+                            <option value="10:00AM - 01:00Pm"> 10:00AM - 01:00Pm </option>
+                            <option value="01:00PM - 04:00Pm"> 01:00PM - 04:00Pm </option>
+                            <option value="04:00PM - 07:00Pm"> 04:00PM - 07:00Pm </option>
+                        </select>
+                    </td>
+                </tr><br/>
+
+                <tr >
+                    <td align="right"> <button class="btn btn-primary"> Submit </button></td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+</form>
+</body>

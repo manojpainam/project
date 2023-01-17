@@ -21,10 +21,13 @@ label{
     margin-left: 25px;
     width: 520px;
 }
+.form-control1{
+    margin-left: 25px;
+    width: 520px;
+}
 
 .btn-primary{
     width: 50%;
-    /* height: 50px; */
     border: 1px solid;
     border-radius:25px ;
     font-size: 18px;
@@ -38,4 +41,10 @@ label{
 span{
     margin-left: 29px;
     color: red;
+}
+.eyeicon{
+    color: black;
+    position: absolute;
+    left: 500px;
+   margin-top: 4px;
 }

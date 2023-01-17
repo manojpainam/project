@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -20,5 +21,8 @@ export class AppComponent {
     Validators.required
   ])
   });
+    
+ 
+  
    
 }

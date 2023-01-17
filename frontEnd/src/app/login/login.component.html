@@ -50,6 +50,17 @@
       <div class="sign-up">
         not a member?<a routerLink="/register"> sign up</a>
       </div>
+      
+      sign in with Google
+      <asl-google-signin-button *ngIf="!user">Google</asl-google-signin-button>
+         <div *ngIf="!user">
+    <img src="{{user.photoUrl}}">
+    <div>
+        <h4>{{user.name}}</h4>
+        <p>{{user.email}}</p>
+    </div>
+
+         </div>
 
 
     </form>

@@ -8,9 +8,9 @@ import { HeaderComponent } from './header/header.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { ServiceComponent } from './service/service.component';
 import { Products2Component } from './products2/products2.component';
 import { Cart2Component } from './cart2/cart2.component';
+import { RequestComponent } from './request/request.component';
 
 
 const routes: Routes = [
@@ -23,7 +23,8 @@ const routes: Routes = [
   {path:'products2',canActivate:[AuthGuard], component:Products2Component},
   {path:'cart',component:CartComponent},
   {path:'cart2',component:Cart2Component},
-  {path:'service', component:ServiceComponent},
+  {path:'request',component:RequestComponent}
+
 
 ];
 

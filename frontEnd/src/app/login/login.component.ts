@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CustomerService } from '../customer.service';
+import { SocialAuthService } from '@abacritt/angularx-social-login';
 
 
 @Component({
@@ -12,12 +13,10 @@ import { CustomerService } from '../customer.service';
 export class LoginComponent implements OnInit {
   customer: any;
 
-  constructor(private service: CustomerService, private router: Router,private toastr: ToastrService) {
+  constructor(private service: CustomerService, private router: Router,private toastr: ToastrService,private authService: SocialAuthService) {
    
   }
-  ngOnInit(): void {
-
-  }
+ 
 
   async loginSubmit(loginForm: any) {
     console.log(loginForm);
@@ -39,6 +38,19 @@ export class LoginComponent implements OnInit {
 
     }
 
+  }
+
+  user: any;
+  loggedIn: any;
+  
+
+
+  ngOnInit() {
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+      console.log(this.user);
+    });
   }
   
 }

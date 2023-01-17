@@ -1,36 +1,50 @@
 package com.model;
 
-import java.sql.Date;
+import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Problem {
+	
+	
 	@Id@GeneratedValue
-    private int ServiceId;
-	@Column
+	private int servId;
 	private String device;
-	private String deviceCompany;
+	private String brand;
 	private String model;
 	private String problem;
+	private String number;
 	private String address;
-	private Date date;
+	private Date dateOfVisit;
 	private String time;
 	
 	public Problem() {
 		super();
-		
 	}
 
-	public int getServiceId() {
-		return ServiceId;
+	public Problem(int servId, String device, String brand, String model, String problem, String number, String address,
+			Date dateOfVisit, String time) {
+		super();
+		this.servId = servId;
+		this.device = device;
+		this.brand = brand;
+		this.model = model;
+		this.problem = problem;
+		this.number = number;
+		this.address = address;
+		this.dateOfVisit = dateOfVisit;
+		this.time = time;
 	}
 
-	public void setServiceId(int serviceId) {
-		ServiceId = serviceId;
+	public int getServId() {
+		return servId;
+	}
+
+	public void setServId(int servId) {
+		this.servId = servId;
 	}
 
 	public String getDevice() {
@@ -41,12 +55,12 @@ public class Problem {
 		this.device = device;
 	}
 
-	public String getDeviceCompany() {
-		return deviceCompany;
+	public String getBrand() {
+		return brand;
 	}
 
-	public void setDeviceCompany(String deviceCompany) {
-		this.deviceCompany = deviceCompany;
+	public void setBrand(String brand) {
+		this.brand = brand;
 	}
 
 	public String getModel() {
@@ -65,6 +79,14 @@ public class Problem {
 		this.problem = problem;
 	}
 
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
 	public String getAddress() {
 		return address;
 	}
@@ -73,12 +95,12 @@ public class Problem {
 		this.address = address;
 	}
 
-	public Date getDate() {
-		return date;
+	public Date getDateOfVisit() {
+		return dateOfVisit;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setDateOfVisit(Date dateOfVisit) {
+		this.dateOfVisit = dateOfVisit;
 	}
 
 	public String getTime() {
@@ -91,13 +113,18 @@ public class Problem {
 
 	@Override
 	public String toString() {
-		return "Service [ServiceId=" + ServiceId + ", device=" + device + ", deviceCompany=" + deviceCompany
-				+ ", model=" + model + ", problem=" + problem + ", address=" + address + ", date=" + date + ", time="
-				+ time + "]";
+		return "Problem [servId=" + servId + ", device=" + device + ", brand=" + brand + ", model=" + model
+				+ ", problem=" + problem + ", number=" + number + ", address=" + address + ", dateOfVisit="
+				+ dateOfVisit + ", time=" + time + "]";
 	}
 	
 	
 	
+	
+	
+	
+	
+
 	
 
 }

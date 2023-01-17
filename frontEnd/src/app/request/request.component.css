@@ -1,0 +1,24 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #2980b9, #8e44ad);
+    height: 150vh;
+    overflow: hidden;
+}
+
+input{
+    width: 500px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: #2980b9;
+}
+
+select{
+    width: 500px;
+    height: 40px;
+    border-radius: 10px;
+}
+.heading{
+    color: #000;
+    text-size-adjust: 100;
+}

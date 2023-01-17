@@ -11,6 +11,9 @@ import { ProjectService } from '../project.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit{
+onStrengthChange($event: Event) {
+throw new Error('Method not implemented.');
+}
    
   registerForm: FormGroup;
   registerInfo: any;
@@ -29,7 +32,7 @@ export class RegisterComponent implements OnInit{
       confirmpassword : new FormControl('',Validators.required)
     },
     {
-      Validators:this.mustMatch('password','confirmpassword')
+      validators:this.mustMatch('password','confirmpassword')
     }
     );
 

@@ -36,9 +36,6 @@ export class CustomerService {
     this.ProductToBeAdded = new Subject();
    }
 
-  // getCustomerLogged(): boolean{
-  //   return this.isCustomerLogged;
-  // }
 
   getCustomerLogged(): boolean{
     return this.isCustomerLogged;
@@ -61,8 +58,8 @@ export class CustomerService {
     return this.ProductToBeAdded.asObservable();
   }
 
-  SubmitRequest(data: any) {
-    return this.httpClient.post('serviceRequest', data);
+  ProblemRegister(problem: any){
+    return this.httpClient.post('ProblemRegister', problem);
   }
 
 }

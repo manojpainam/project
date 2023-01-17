@@ -14,13 +14,15 @@ import com.model.Customer;
 import com.model.Problem;
 
 
+
 @RestController
 public class CustomerController {
 
 	@Autowired
 	CustomerDAO custDAO;
+	@Autowired
 	ProblemDAO problemDAO;
-
+	
 	
 
 	@GetMapping("/customerLogin/{emailId}/{password}")
@@ -46,6 +48,20 @@ public class CustomerController {
 
 		System.out.println("customer Registeration Failed!!!");
 		return "customer Registeration Failed!!!";
+	}
+	
+	@PostMapping("/ProblemRegister")
+	public String ProblemRegister(@RequestBody Problem problem) {
+		System.out.println(problem);
+		Problem prob = problemDAO.ProblemRegister(problem);
+
+		if (prob != null) {
+			System.out.println("problem Registered Successfully!!!");
+			return "problem Registered Successfully!!!";
+		}
+
+		System.out.println("problem Registeration Failed!!!");
+		return "problem Registeration Failed!!!";
 	}
 	
 	

@@ -7,19 +7,31 @@ import { CartService } from '../cart.service';
   styleUrls: ['./cart2.component.css']
 })
 export class Cart2Component implements OnInit {
-  public product : any = [];
-    grandTotal: number = 0;
+  //public product : any = [];
+    grandTotal: any;
+    cartItems: any= [];
+    product:any;
    
   constructor(private cartService: CartService){
-     
+     this.grandTotal = 0;
   }
   ngOnInit(): void {
     this.cartService.getProducts().subscribe(res=>{
       this.product = res;
-    })
+    });
+
+    this.cartItems = this.cartService.cartItemList;
+    this.cartItems.forEach((product: any) => {
+      this.grandTotal+=Number(product.price);
+      
+    });
+
+    
+    
   }
   removeItem(item : any){
     this.cartService.removeCartItem(item);
+    this.grandTotal-=Number(item.price);
   }
 
   emptycart(){
@@ -50,15 +62,12 @@ export class Cart2Component implements OnInit {
 
 rzp1: any;
 pay(){
-   this.options.amount = '600000';
+   this.options.amount = String(this.grandTotal*100);
    this.rzp1 = new this.cartService.nativeWindow.Razorpay(this.options);
    this.rzp1.open();
 }
 
-total(data : any){
-  data = this.grandTotal+ this.product.price;
-  return data;
-}
+
 
 
 

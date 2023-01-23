@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CustomerService } from '../customer.service';
 import { SocialAuthService } from '@abacritt/angularx-social-login';
+import { GoogleApiService } from '../google-api.service';
 
 
 @Component({
@@ -52,6 +53,7 @@ export class LoginComponent implements OnInit {
       console.log(this.user);
     });
   }
+
   
 }
   

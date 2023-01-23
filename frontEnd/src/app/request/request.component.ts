@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CustomerService } from '../customer.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class RequestComponent implements OnInit{
 
   RequestInfo: any;
 
-  constructor(private servive :CustomerService){
+  constructor(private servive :CustomerService,private router:Router){
 
   }
 
@@ -20,6 +21,9 @@ export class RequestComponent implements OnInit{
         this.RequestInfo = result;
       })
     )
+    localStorage.setItem('cartItems', JSON.stringify(servForm));
+    console.log(servForm);
+    this.router.navigate(['service']);
 
   }
   ngOnInit(): void {

@@ -57,8 +57,66 @@ export class Cart2Component implements OnInit {
     },
     "theme": {
         "color": "#3399cc"
+    },config: {
+      display: {
+        blocks: {
+          hdfc: { //name for HDFC block
+            name: "Pay using HDFC Bank",
+            instruments: [
+              {
+                method: "card",
+                issuers: ["HDFC"]
+              },
+              {
+                method: "netbanking",
+                banks: ["HDFC"]
+              },
+             
+  
+            ]
+          },
+          other: { 
+            name: "Other Payment modes",
+            instruments: [
+              {
+                method: "card",
+                issuers: ["ICIC"]
+              },
+              {
+                method: 'netbanking',
+              },
+              {
+                method: 'upi'
+            },
+            ]
+          }
+        },
+        hide: [
+          {
+          method: "upi"
+          }
+        ],
+        sequence: ["block.hdfc", "block.other"],
+        preferences: {
+          show_default_blocks: false // Should Checkout show its default blocks?
+        }
+      }
+    },
+    "handler": function (response: { razorpay_payment_id: any; }) {
+      alert(response.razorpay_payment_id);
+    },
+    "modal": {
+      "ondismiss": function () {
+        if (confirm("Are you sure, you want to close the form?")) {
+          alert( "You pressed OK!");
+          console.log("Checkout form closed by the user");
+        } else {
+         alert( "You pressed Cancel!");
+          console.log("Complete the Payment")
+        }
+      }
     }
-};
+  };
 
 rzp1: any;
 pay(){

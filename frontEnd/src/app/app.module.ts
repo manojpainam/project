@@ -28,12 +28,8 @@ import { RequestComponent } from './request/request.component';
 import { Cart2Component } from './cart2/cart2.component';
 import { OtpComponent } from './otp/otp.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
-
-
-
-
-
-
+import { DetailsComponent } from './details/details.component';
+import { ServiceComponent } from './service/service.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +45,8 @@ import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.compone
     RequestComponent,
     OtpComponent,
     ForgetpasswordComponent,
+    DetailsComponent,
+    ServiceComponent,
     
    
   ],

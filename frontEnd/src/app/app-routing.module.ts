@@ -14,6 +14,8 @@ import { RequestComponent } from './request/request.component';
 import { ProductsComponent } from './products/products.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { OtpComponent } from './otp/otp.component';
+import { DetailsComponent } from './details/details.component';
+import { ServiceComponent } from './service/service.component';
 
 
 
@@ -28,7 +30,10 @@ const routes: Routes = [
   {path:'cart2',component:Cart2Component},
   {path:'request',component:RequestComponent},
   {path:'forgetpassword', component:ForgetpasswordComponent},
-  {path:'otp', component:OtpComponent}
+  {path:'otp', component:OtpComponent},
+  {path:'details', component:DetailsComponent},
+  {path:'service', component:ServiceComponent}
+
 
 
 

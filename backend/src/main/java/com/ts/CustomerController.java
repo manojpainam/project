@@ -1,6 +1,8 @@
 package com.ts;
 
 
+import java.util.Random;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dao.CustomerDAO;
+import com.dao.EmailServiceImpl;
 import com.dao.ProblemDAO;
 import com.model.Customer;
 import com.model.Problem;
@@ -22,7 +25,9 @@ public class CustomerController {
 	CustomerDAO custDAO;
 	@Autowired
 	ProblemDAO problemDAO;
-	
+	@Autowired 
+	EmailServiceImpl emailService;
+
 	
 
 	@GetMapping("/customerLogin/{emailId}/{password}")
@@ -64,7 +69,25 @@ public class CustomerController {
 		return "problem Registeration Failed!!!";
 	}
 	
-	
+	@GetMapping("/forgetPassword/{emailId}")
+	public String forgetPassword(@PathVariable("emailId")String emailId) {
+			System.out.println(emailId);
+			String otp = "";
+			Random random = new Random();
+			
+			otp += random.nextInt(1000,999);
+			System.out.println(otp);
+			
+			String status = emailService.sendSimpleMail(emailId," otp for password change is "+otp,"Forget Password");
+			if(status!=null) {
+				System.out.println("Mail Send");
+				return otp;
+			}
+			
+			return null;
+		}
+		
 
+	
 	
 }

@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
       if (this.customer != null) {
           this.service.setCustomerLoggedIn();
           localStorage.setItem("emailId", JSON.stringify(loginForm.emailId));
-          this.toastr.success('Login success')
-          this.router.navigate(['products2']);
+          // this.toastr.success('Login success')
+          this.router.navigate(['products']);
       } else {
          this.toastr.warning('invalid credentials');
       }

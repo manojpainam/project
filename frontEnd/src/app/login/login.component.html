@@ -28,8 +28,7 @@
 
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-        <input type="password" class="form-control" name="password" ngModel #password="ngModel" required minlength="2"
-          maxlength="10" />
+        <input type="password" class="form-control" name="password" ngModel #password="ngModel" required />
       </div><br />
 
       <div *ngIf="password.errors?.['required'] && password.touched">
@@ -40,7 +39,7 @@
         <h6> Enter atleast 2 character for password </h6>
       </div><br />
 
-      <div class="pass">Forgetten password</div>
+      <div class="pass"><a routerLink="/forgetpassword">Forgetten password</a></div>
 
       <div align="center">
         <button align="center" [disabled]="!loginForm.valid" class="btn btn-primary"> Login
@@ -51,16 +50,10 @@
         not a member?<a routerLink="/register"> sign up</a>
       </div>
       
+      <div class="google" align="left">
       sign in with Google
-      <asl-google-signin-button *ngIf="!user">Google</asl-google-signin-button>
-         <div *ngIf="!user">
-    <img src="{{user.photoUrl}}">
-    <div>
-        <h4>{{user.name}}</h4>
-        <p>{{user.email}}</p>
+      <asl-google-signin-button ></asl-google-signin-button>
     </div>
-
-         </div>
 
 
     </form>

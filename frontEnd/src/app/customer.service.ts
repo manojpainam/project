@@ -62,4 +62,8 @@ export class CustomerService {
     return this.httpClient.post('ProblemRegister', problem);
   }
 
+  forgetpassword(mail: any){
+    return this.httpClient.get("forgetPassword/"+mail.emailId);
+  }
+
 }

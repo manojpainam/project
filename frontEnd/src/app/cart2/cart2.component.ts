@@ -8,16 +8,14 @@ import { CartService } from '../cart.service';
 })
 export class Cart2Component implements OnInit {
   public product : any = [];
-  public grandTotal : number = 0;
-
+    grandTotal: number = 0;
+   
   constructor(private cartService: CartService){
      
   }
   ngOnInit(): void {
     this.cartService.getProducts().subscribe(res=>{
       this.product = res;
-
-      this.grandTotal = this.cartService.getTotalPrice();
     })
   }
   removeItem(item : any){
@@ -32,9 +30,9 @@ export class Cart2Component implements OnInit {
     "key": "rzp_test_7HdkaZ1xFGPomB",
     "amount": "50000", 
     "currency": "INR",
-    "name": "Acme Corp",
+    "name": "Eserve",
     "description": "Test Transaction",
-    "image": "https://example.com/your_logo",
+    "image": "assets/images/2.png",
     "order_id": "", 
     "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
     "prefill": {
@@ -52,9 +50,16 @@ export class Cart2Component implements OnInit {
 
 rzp1: any;
 pay(){
-   this.options.amount = '50000';
+   this.options.amount = '600000';
    this.rzp1 = new this.cartService.nativeWindow.Razorpay(this.options);
    this.rzp1.open();
 }
+
+total(data : any){
+  data = this.grandTotal+ this.product.price;
+  return data;
+}
+
+
 
 }

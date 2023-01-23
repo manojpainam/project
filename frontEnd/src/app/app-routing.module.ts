@@ -3,14 +3,18 @@ import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
-import { CartComponent } from './cart/cart.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { Products2Component } from './products2/products2.component';
+
+
 import { Cart2Component } from './cart2/cart2.component';
 import { RequestComponent } from './request/request.component';
+import { ProductsComponent } from './products/products.component';
+import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
+import { OtpComponent } from './otp/otp.component';
+
 
 
 const routes: Routes = [
@@ -20,10 +24,12 @@ const routes: Routes = [
   {path:'login', component:LoginComponent},
   {path:'register', component:RegisterComponent},
   {path:'header', component:HeaderComponent},
-  {path:'products2',canActivate:[AuthGuard], component:Products2Component},
-  {path:'cart',component:CartComponent},
+  {path:'products',canActivate:[AuthGuard], component:ProductsComponent},
   {path:'cart2',component:Cart2Component},
-  {path:'request',component:RequestComponent}
+  {path:'request',component:RequestComponent},
+  {path:'forgetpassword', component:ForgetpasswordComponent},
+  {path:'otp', component:OtpComponent}
+
 
 
 ];

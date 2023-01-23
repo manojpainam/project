@@ -15,10 +15,10 @@ export class ProjectService {
     this.isCustomerLogged  = false;
   }
 
-  getProduct(){
-    return this.httpClient.get<any>("https://fakestoreapi.com/products").pipe(map((res: any)=>{
-       return res;
-    }))
-  }
+  // getProduct(){
+  //   return this.httpClient.get<any>("https://fakestoreapi.com/products").pipe(map((res: any)=>{
+  //      return res;
+  //   }))
+  // }
 
 }

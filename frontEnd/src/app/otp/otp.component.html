@@ -1,0 +1,11 @@
+<div class="container" align="center">
+<form #loginForm="ngForm" (ngSubmit)="otpValid(loginForm.value)" novalidate>
+
+        <div class="input-group">
+            <h3>Enter Otp</h3>
+            <input type="text" class="form-control" name="otp" ngModel />
+        </div><br/>
+        <button [disabled]="!loginForm.valid" class="btn btn-primary"> Submit </button>
+    <button class="btn btn-link" align="center" (click)="generate()">Resend Otp</button>
+</form>
+</div>

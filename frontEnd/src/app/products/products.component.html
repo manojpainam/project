@@ -1,105 +1,55 @@
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-md-4" *ngFor="let product of products">
-            <div class="card" style="width:400px">
-                <img class="card-img-top" [src]="product.imagePath" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title" align="center">{{product.name}}</h4>
-                    <p class="card-text">{{product.description}}</p>
-                    <h3>₹{{product.price}}/-</h3>
-                    <p align="right">
-                        <button class="btn btn-primary" (click)="addcart(product)"> Add to Cart </button>
-                    </p>
-                </div>
-            </div>
+
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a (click)="filter('')">
+                <img src="https://www.omnisend.com/blog/wp-content/uploads/2022/03/image8-2.png">
+                <h5>All products</h5>
+            </a>
+        </div>
+
+        <div  class="item">
+            <a (click)="filter('mobile')">
+                <img src="https://sathya.in/media/3420/catalog/mobiles.jpg">
+                <h5>Mobile</h5>
+            </a>
+        </div>
+
+        <div class="item">
+            <a (click)="filter('laptop')">
+                <img src="https://img.freepik.com/free-psd/laptop-psd-mockup-with-gradient-led-light_53876-138283.jpg?w=996&t=st=1673334102~exp=1673334702~hmac=22ba02c7fb7b3fe2d78ec8bdab18c2bafc49f1b98df8e9f7ab9eda15d1b03ef8">
+                <h5>laptop</h5>
+            </a>
+        </div>
+
+        <div class="item">
+            <a (click)="filter('desktop')">
+                <img src="https://rdp.in/web/image/799165/desk-pc-header.png">
+                <h5>desktop</h5>
+            </a>
         </div>
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <div class="card" style="width:400px">
-                <img class="card-img-top" src="./assets/products/10001.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title" align="center">Nokia</h4>
-                    <p class="card-text">No Cost EMI Applicable from 1499/- PerMonth. Standard Charges Applicable.</p>
-                    <h3>₹12999.00/-</h3>
-                    <p align="right">
-                        <button class="btn btn-primary"> Add to Cart </button>
-                    </p>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <div class="card" style="width:400px">
-                <img class="card-img-top" src="./assets/products/10004.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title" align="center">Samsung</h4>
-                    <p class="card-text">No Cost EMI Applicable from 1499/- PerMonth. Standard Charges Applicable.</p>
-                    <h3>₹29999.00/-</h3>
-                    <p align="right">
-                        <button class="btn btn-primary"> Add to Cart </button>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4">
-            <div class="card" style="width:400px">
-                <img class="card-img-top" src="./assets/products/10003.jpg" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title" align="center">Apple</h4>
-                    <p class="card-text">No Cost EMI Applicable from 1499/- PerMonth. Standard Charges Applicable.</p>
-                    <h3>₹99999.00/-</h3>
-                    <p align="right">
-                        <button class="btn btn-primary"> Add to Cart </button>
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div> -->
-
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-md-4" *ngFor="let product of products">
-            <div class="card" style="width:400px">
-                <img class="card-img-top" [src]="product.imagePath" alt="Card image" style="width:100%">
-                <div class="card-body">
-                    <h4 class="card-title" align="center">{{product.name}}</h4>
-                    <p class="card-text">{{product.description}}</p>
-                    <h3>₹{{product.price}}/-</h3>
-                    <p align="right">
-                        <button class="btn btn-primary" (click)="addcart(product)"> Add to Cart </button>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-<div class="shell" >
     <div class="container" >
         <div class="row">
-            <div class="col-md-3" *ngFor="let product of products">
+            <ng-container *ngFor="let product of filterCategory | filter: searchKey:'title'">
+            <div class="col-md-3" >
                 <div class="wsk-cp-product">
             
                     <div class="wsk-cp-img">
-                        <img [src]="product.imagePath" alt="Product"
+                        <img [src]="product.image" alt="Product"
                             class="img-responsive" />
                     </div>
             
                     <div class="wsk-cp-text">
                         <div class="category">
-                            <span>Mobile</span>
+                            <span>{{product.category}}</span>
                         </div>
             
                         <div class="title-product">
-                            <h3>{{product.name}}</h3>
+                            <h3>{{product.title}}</h3>
                         </div>
             
                         <div class="description-prod">
@@ -107,74 +57,16 @@
                         </div>
             
                         <div class="card-footer">
-                            <div class="wcf-left"><span class="price">{{product.price}}</span></div>
-                            <div class="wcf-right"><button class="btn btn-primary">Add to Cart</button></div>
+                            <div class="wcf-left"><span class="price">₹{{product.price}}</span></div>
+                            <div class="wcf-right"><button class="btn btn-primary" (click)="addtocart(product)">Add to Cart</button></div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            
-                <div class="col-md-3" *ngFor="let laptop of laptops">
-                    <div class="wsk-cp-product">
-                
-                        <div class="wsk-cp-img">
-                            <img [src]="laptop.imagePath" alt="Product"
-                                class="img-responsive" />
-                        </div>
-                
-                        <div class="wsk-cp-text">
-                            <div class="category">
-                                <span>Laptop</span>
-                            </div>
-                
-                            <div class="title-product">
-                                <h3>{{laptop.name}}</h3>
-                            </div>
-                
-                            <div class="description-prod">
-                                <p>{{laptop.description}}</p>
-                            </div>
-                
-                            <div class="card-footer">
-                                <div class="wcf-left"><span class="price">{{laptop.price}}</span></div>
-                                <div class="wcf-right"><button class="btn btn-primary">Add to Cart</button></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                
-                    <div class="col-md-3" *ngFor="let desktop of desktops">
-                        <div class="wsk-cp-product">
-                    
-                            <div class="wsk-cp-img">
-                                <img [src]="desktop.imagePath" alt="Product"
-                                    class="img-responsive" />
-                            </div>
-                    
-                            <div class="wsk-cp-text">
-                                <div class="category">
-                                    <span>deskop</span>
-                                </div>
-                    
-                                <div class="title-product">
-                                    <h3>{{desktop.name}}</h3>
-                                </div>
-                    
-                                <div class="description-prod">
-                                    <p>{{desktop.description}}</p>
-                                </div>
-                    
-                                <div class="card-footer">
-                                    <div class="wcf-left"><span class="price">{{desktop.price}}</span></div>
-                                    <div class="wcf-right"><button class="btn btn-primary">Add to Cart</button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </ng-container>
+ 
 
         </div>
     </div>
-</div>
+
+

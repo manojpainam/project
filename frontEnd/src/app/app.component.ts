@@ -1,4 +1,5 @@
 
+import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -21,6 +22,18 @@ export class AppComponent {
     Validators.required
   ])
   });
+   
+  user: any;
+  loggedIn: any;
+  constructor(private authService: SocialAuthService) { }
+
+  ngOnInit() {
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+      console.log(user);
+    });
+  }
     
  
   
